@@ -1,0 +1,17 @@
+.hello img{
+    border-radius: 60%;
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    top:500px;
+    left: 1300px;
+    opacity: 0.7;
+    animation: glow .8s ease-out infinite;
+    box-shadow: 0px 0px 5px rgb(31, 141, 230);
+    z-index: 2;
+}
+@keyframes glow{
+    100%{
+        box-shadow: 0 0 5px #fff,0 0 10px rgb(100, 73, 199), 0 0 20px rgb(123, 196, 229),0 0 75px #370fa4 ;
+    }
+}

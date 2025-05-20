@@ -1,0 +1,87 @@
+.intro{
+    width: 98%;
+    height: 500px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 5px gray;
+    margin: 20px;
+    border-radius: 10px;
+    margin-top: 150px;
+}
+.intro_item1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+  z-index: 1;
+}
+.intro_item2{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+  z-index: 1;
+}
+.intro_item2 img{
+    width:90%;
+    height:490px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 48%;
+    box-shadow: 0px 0px 6px rgb(114, 189, 138);
+    opacity: 0.7;
+}
+.intro_item1 h1{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 35px;
+    font-family: "Tektur", sans-serif;
+    color:rgb(76, 182, 208);
+    text-shadow: 0px 0px 5px rgb(231, 242, 245);
+}
+.intro_item1 h2{
+    font-size: 25px;
+    margin-left: 35px;
+    font-family: "Kanit", sans-serif;
+    color:rgb(125, 217, 186);
+    text-shadow: 0px 0px 5px gray;
+    margin-top: 0px;
+}
+@keyframes typing{
+    from{
+        width: 0ch;
+    }
+}
+.intro_item1 p{
+    margin-left: 35px;
+    font-size: 20px;
+    font-family: "Winky Sans", sans-serif;
+    color:rgb(238, 64, 64);
+    margin-bottom: 0px;
+    overflow: hidden;
+    width: 30ch;
+    text-wrap: nowrap;
+    animation: typing 2s steps(25) infinite alternate-reverse;
+}
+.intro_item1 h6{
+    margin-left: 35px;
+    font-size: 20px;
+    font-family: "Winky Sans", sans-serif;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:whitesmoke;
+}
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1; /* Places the video behind other content */
+}
+  

@@ -1,0 +1,21 @@
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px gray;
+    margin: 30px;
+}
+.counter_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.counter_item h1{
+    font-size: 20px;
+    font-family:"Winky Sans", sans-serif
+}
+.counter_item p{
+    font-size: 18px;
+    font-family: "Cedarville Cursive", cursive;
+}

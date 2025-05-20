@@ -1,0 +1,25 @@
+.partner_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.partner_image img{
+    width: 80px;
+    height: 80px;
+}
+.partners{
+    display: flex;
+    justify-content: space-evenly;
+}
+#our_partner{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family:"Winky Sans", sans-serif ;
+    text-shadow: 0px 0px 3px black;
+}
+#our_partner label{
+    color: rgb(76, 76, 208);
+    text-shadow: 0px 0px 3px rgb(76, 76, 208);
+}

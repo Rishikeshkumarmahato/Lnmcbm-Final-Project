@@ -1,0 +1,198 @@
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.sliderBody{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.sliderBody.slide-next{
+    animation: slideNext 0.5s ease-in-out;
+}
+.sliderBody.slide-prev{
+    animation: slidePrev 0.5s ease-in-out;
+}
+@keyframes slideNext{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slidePrev{
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.sliderBody_content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.sliderBody_content_item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+.sliderBody_img{
+    width: 40%;
+    margin-right: 30px;
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float{
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.sliderBody_img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.sliderBody_content h1{
+    font-size: 24px;
+    font-family:"Tektur", sans-serif;
+    color: #1a237e;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.sliderBody_content_item label{
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-family:"Tektur", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+}
+.sliderBody_content_item p{
+    margin: 0;
+    color: #666;
+    font-family: "Tektur", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sliderBody_content_item i{
+    font-size: 16px;
+}
+.leftbtn button,.rightbtn button{
+    font-size: 20px;
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+}
+.leftbtn button:hover,.rightbtn button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(26, 35, 126, 0.3);
+}
+#coming{
+    font-family: "Winky Sans", sans-serif;
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    display: inline-block;
+    color: white;
+    margin: 20px 40px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+}
+.slider-indicators{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.indicator{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(26, 35, 126, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.indicator.active{
+    background: #1a237e;
+    transform: scale(1.2);
+}
+@media (max-width: 1024px){
+    .slider{
+        width: 85%;
+    }
+}
+@media (max-width: 768px){
+    .slider{
+        width: 90%;
+        padding: 15px;
+    }
+    .sliderBody{
+        flex-direction: column;
+        text-align: center;
+    }
+    .sliderBody_img{
+        width: 60%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .sliderBody_content_item{
+        justify-content: center;
+    }
+    .sliderBody_content h1{
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px){
+    .slider{
+        width: 95%;
+        padding: 10px;
+    }
+    .sliderBody_img{
+        width: 80%;
+    }
+    .sliderBody_content_item{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .leftbtn button,.rightbtn button{
+        font-size: 16px;
+        width: 35px;
+        height: 35px;
+    }
+}
